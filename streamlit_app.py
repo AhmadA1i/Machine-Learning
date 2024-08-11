@@ -73,16 +73,16 @@ RFC = RandomForestClassifier()
 RFC.fit(X,y)
 
 prediction = RFC.predict(input_row)
-prediction_probab = RFC.predict_probab(input_row)
+prediction_proba = RFC.predict_proba(input_row)
 
-df_prediction_probab = pd.DataFrame(prediction_probab)
-df_prediction_probab.columns = ['Adelie', 'Chinstrap', 'Gentoo']
-df_prediction_probab.rename(columns={0: 'Adelie',
+df_prediction_proba = pd.DataFrame(prediction_proba)
+df_prediction_proba.columns = ['Adelie', 'Chinstrap', 'Gentoo']
+df_prediction_proba.rename(columns={0: 'Adelie',
                                      1: 'Chinstrap',
                                      2: 'Gentoo'})
 
 st.subheader('Predicted Species')
-st.dataframe(df_prediction_probab,
+st.dataframe(df_prediction_proba,
              column_config={
                'Adelie': st.column_config.ProgressColumn(
                  'Adelie',
