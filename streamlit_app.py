@@ -93,7 +93,7 @@ st.dataframe(df_prediction_probab,
                ),
                'Chinstrap': st.column_config.ProgressColumn(
                  'Chinstrap',
-                 format='%f'
+                 format='%f',
                  width='medium',
                  min_value=0
                  max_value=1
