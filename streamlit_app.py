@@ -5,7 +5,7 @@ from sklearn.ensemble import RandomForestClassifier
 
 st.title('🤖 Machine Learning App')
 
-st.info('This is app builds a machine learning model!')
+st.info('This app builds a machine learning model!')
 
 with st.expander('Data'):
   st.write('**Raw data**')
@@ -24,7 +24,6 @@ with st.expander('Data visualization'):
   st.scatter_chart(data=df, x='bill_length_mm', y='body_mass_g', color='species')
 
 # Input features
-with st.sidebar:
   st.header('Input features')
   island = st.selectbox('Island', ('Biscoe', 'Dream', 'Torgersen'))
   bill_length_mm = st.slider('Bill length (mm)', 32.1, 59.6, 43.9)
